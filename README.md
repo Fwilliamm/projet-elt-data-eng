@@ -27,12 +27,13 @@ Créer un pipeline **ELT complet** à partir d’un jeu de données e-commerce (
 projet-data-engineering/
 ├── data/                         # Fichier brut CSV
 │   └── Online_Retail.csv
-├── script.py                     # Script d’ingestion des données brutes
-├── run_pipeline.py               # Script d’automatisation du pipeline ELT
-├── sql/                          # Scripts SQL
-│   ├── create_tables.sql
-│   ├── insert_dimensions.sql
-│   └── insert_facts.sql
+├── Scripts/
+│   ├── ingestion.py              # Script d’ingestion des données brutes  
+│   └── run_pipeline.py           # Script d’automatisation du pipeline ELT
+├── SQL/                          # Scripts SQL
+│   ├── create_tables.SQL
+│   ├── insert_dimensions.SQL
+│   └── insert_facts.SQL
 ├── docs/                         # Présentation et schémas
 │   ├── schema_pipeline.png
 │   ├── schema_bdd.png
@@ -51,3 +52,10 @@ projet-data-engineering/
 
 ## Exécuter le pipeline
 python run_pipeline.py
+
+## Schéma du pipeline ELT
+
+![Pipeline ELT](./docs/pipeline_elt.png)
+
+## Schéma de la BDD
+![Schema BDD](./docs/schema_bdd.png)

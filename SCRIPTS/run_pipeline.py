@@ -17,7 +17,7 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-# Fonction d'exécution du fichier sql ===
+# Fonction d'exécution du fichier SQL ===
 def run_sql_file(filename, cursor):
     logging.info(f"Running {filename}...")
     with open(filename, "r", encoding="utf-8") as file:
@@ -38,9 +38,9 @@ try:
     cursor = connection.cursor()
     logging.info("Connected to PostgreSQL.")
 
-    run_sql_file("sql/create_tables.sql", cursor)
-    run_sql_file("sql/insert_dimensions.sql", cursor)
-    run_sql_file("sql/insert_facts.sql", cursor)
+    run_sql_file("../SQL/create_tables.sql", cursor)
+    run_sql_file("../SQL/insert_dimensions.sql", cursor)
+    run_sql_file("../SQL/insert_facts.sql", cursor)
 
     cursor.close()
     connection.close()

@@ -22,7 +22,7 @@ logging.basicConfig(
 
 # Chargement du fichier CSV
 try:
-    df = pd.read_csv("data/Online_Retail.csv", encoding="ISO-8859-1")
+    df = pd.read_csv("../Online_Retail.csv", encoding="ISO-8859-1")
     df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'], format="%m/%d/%y %H:%M")
     df.columns = [col.lower().replace(" ", "_") for col in df.columns]
     logging.info("CSV loaded and cleaned.")
